@@ -1,0 +1,225 @@
+Started GET "/" for ::1 at 2023-03-19 03:39:11 +0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/amrabuaza/.rvm/gems/ruby-2.7.6/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/amrabuaza/.rvm/gems/ruby-2.7.6/gems/railties-6.1.7.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.5ms | Allocations: 445)
+Completed 200 OK in 33ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 3792)
+
+
+  [1m[35m (585.8ms)[0m  [1m[35mCREATE DATABASE "person_development" ENCODING = 'unicode'[0m
+  [1m[35m (439.5ms)[0m  [1m[35mCREATE DATABASE "person_test" ENCODING = 'unicode'[0m
+  [1m[35m (38.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "Person" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.5ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parent" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "parents" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (12.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" integer, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE INDEX "index_persons_on_parent_id" ON "persons" ("parent_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230319003940"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-19 01:00:41.887086"], ["updated_at", "2023-03-19 01:00:41.887086"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mPerson Load (2.4ms)[0m  [1m[34mSELECT "persons".* FROM "persons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (38.3ms)[0m  [1m[32mINSERT INTO "persons" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "amr"], ["created_at", "2023-03-19 01:07:38.967241"], ["updated_at", "2023-03-19 01:07:38.967241"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (1.0ms)[0m  [1m[34mSELECT "persons".* FROM "persons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "persons".* FROM "persons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (1.0ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 1], ["name", "ahmad"], ["created_at", "2023-03-19 01:08:29.190874"], ["updated_at", "2023-03-19 01:08:29.190874"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "persons".* FROM "persons" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 11]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (0.6ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 2], ["name", "noor"], ["created_at", "2023-03-19 01:10:27.018664"], ["updated_at", "2023-03-19 01:10:27.018664"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (1.7ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 11]]
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 ORDER BY "persons"."id" ASC LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 ORDER BY "persons"."id" ASC LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 2], ["LIMIT", 11]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 ORDER BY "persons"."id" ASC LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 2], ["LIMIT", 11]]
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 ORDER BY "persons"."id" ASC LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 2], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mDROP TABLE "persons"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230319003940"]]
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "persons" ("id")
+)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_persons_on_parent_id" ON "persons" ("parent_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230319003940"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (2.2ms)[0m  [1m[32mINSERT INTO "persons" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "amr"], ["created_at", "2023-03-19 10:36:38.393727"], ["updated_at", "2023-03-19 10:36:38.393727"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (0.8ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 1], ["name", "ahmad"], ["created_at", "2023-03-19 10:37:25.105619"], ["updated_at", "2023-03-19 10:37:25.105619"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (0.7ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 2], ["name", "ahmad chiled"], ["created_at", "2023-03-19 10:37:40.081634"], ["updated_at", "2023-03-19 10:37:40.081634"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 11]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 ORDER BY "persons"."id" ASC LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.8ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 2], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mDROP TABLE "persons"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20230319003940"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5968366107207451290)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPersonTable (20230319003940)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "persons" ("id" bigserial primary key, "parent_id" bigint, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_eacd1084c1"
+FOREIGN KEY ("parent_id")
+  REFERENCES "persons" ("id")
+)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE INDEX "index_persons_on_parent_id" ON "persons" ("parent_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230319003940"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5968366107207451290)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (2.4ms)[0m  [1m[32mINSERT INTO "persons" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "amr"], ["created_at", "2023-03-19 10:39:46.267959"], ["updated_at", "2023-03-19 10:39:46.267959"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (1.0ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 1], ["name", "ahmad"], ["created_at", "2023-03-19 10:40:06.238536"], ["updated_at", "2023-03-19 10:40:06.238536"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (0.7ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 2], ["name", "ahmad ch"], ["created_at", "2023-03-19 10:40:13.122716"], ["updated_at", "2023-03-19 10:40:13.122716"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "persons"[0m
+  [1m[36mPerson Load (5.0ms)[0m  [1m[34mSELECT "persons".* FROM "persons" ORDER BY "persons"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 11]]
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "persons".* FROM "persons" INNER JOIN "persons" "children_grandchildren" ON "persons"."parent_id" = "children_grandchildren"."id" WHERE "children_grandchildren"."parent_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["parent_id", 1], ["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (14.4ms)[0m  [1m[32mINSERT INTO "persons" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "moh"], ["created_at", "2023-03-19 18:34:08.012880"], ["updated_at", "2023-03-19 18:34:08.012880"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (1.9ms)[0m  [1m[32mINSERT INTO "persons" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "ahmed"], ["created_at", "2023-03-19 18:35:23.333277"], ["updated_at", "2023-03-19 18:35:23.333277"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (9.8ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 5], ["name", "khaled"], ["created_at", "2023-03-19 18:35:31.388227"], ["updated_at", "2023-03-19 18:35:31.388227"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (0.7ms)[0m  [1m[32mINSERT INTO "persons" ("parent_id", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["parent_id", 5], ["name", "samer"], ["created_at", "2023-03-19 18:35:46.111460"], ["updated_at", "2023-03-19 18:35:46.111460"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "persons".* FROM "persons" WHERE "persons"."parent_id" = $1[0m  [["parent_id", 5]]
